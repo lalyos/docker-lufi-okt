@@ -10,4 +10,5 @@ COPY start.sh /
 COPY index.html.tmpl /
 RUN chmod +x /start.sh
 ENV TITLE=Default-Title
+ENV BGC=grey
 CMD [ "/start.sh" ]

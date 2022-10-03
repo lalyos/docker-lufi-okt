@@ -52,3 +52,16 @@ docker images
 ## Dockerfile 
 
 ...
+
+
+## Aliases
+
+```
+alias dexl='docker exec -it $(docker ps -ql)'
+alias dll='docker logs $(docker ps -ql)'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias dpsl='docker ps -l'
+alias drm='docker rm -f  $(docker ps -qa)'
+alias drml='docker rm -f $(docker ps -ql)'
+```
