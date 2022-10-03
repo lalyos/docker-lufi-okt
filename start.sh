@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-echo ${TITLE:-Welcome ...} > /var/www/html/index.html
+cat /index.html.tmpl | envsubst > /var/www/html/index.html
+
 nginx -g "daemon off;"
