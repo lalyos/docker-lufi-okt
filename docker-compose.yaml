@@ -1,0 +1,24 @@
+services:
+  dinner:
+    image: lalyos/lunch:v8
+    environment:
+      - TITLE=Mingyart Vacsora
+      - BGC=PaleTurquoise
+      - BODY=<iframe src="https://giphy.com/embed/5t235Nf4wo3rhLSMVy" width="480" height="333" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/garfield-cat-food-5t235Nf4wo3rhLSMVy">via GIPHY</a></p>
+    ports:
+      - 80
+  mydb:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=secret
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+      - vipdb:/var/lib/postgresql/data
+      
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+volumes:
+   vipdb:
