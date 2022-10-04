@@ -11,4 +11,5 @@ COPY index.html.tmpl /
 RUN chmod +x /start.sh
 ENV TITLE=Default-Title
 ENV BGC=grey
+ENV BODY="Please use TITLE/BGC/BODY env vars"
 CMD [ "/start.sh" ]
