@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-cat /index.html.tmpl | envsubst > /var/www/html/index.html
+cat /index.html.tmpl | envsubst > ${WWW_DIR:-/var/lib/nginx/html}/index.html
 
 nginx -g "daemon off;"
