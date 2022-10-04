@@ -1,3 +1,6 @@
+
+[![Join the chat at https://gitter.im/lalyos/docker-lufi-okt3](https://badges.gitter.im/lalyos/docker-lufi-okt3.svg)](https://gitter.im/lalyos/docker-lufi-okt3)
+
 ## Docker Training - 2022-10-3
 
 ### Check installation
@@ -52,6 +55,24 @@ docker images
 ## Dockerfile 
 
 ...
+
+
+## Volumes
+
+```
+docker run \
+  --name=mydb \
+  -d \
+  -v vipdb:/var/lib/postgresql/data \
+  -v $PWD/sql:/docker-entrypoint-initdb.d \
+  -e POSTGRES_PASSWORD=secret  \
+  postgres
+```
+
+check the db:
+```
+docker exec -it mydb psql -U postgres -c 'select * from vip;'
+```
 
 
 ## Aliases
