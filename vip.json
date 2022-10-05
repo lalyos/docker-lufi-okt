@@ -1,0 +1,19 @@
+{
+  "vip": [
+    {
+      "id": "101",
+      "name": "vladimir",
+      "age": 66
+    },
+    {
+      "id": "102",
+      "name": "victor",
+      "age": 64
+    },
+    {
+      "id": "103",
+      "name": "angela",
+      "age": 62
+    }
+  ]
+}

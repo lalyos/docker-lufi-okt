@@ -9,6 +9,14 @@ services:
     # labels:
     #   - "traefik.frontend.rule=Host:ebed.lvh.me"
 
+  vip:
+    image: lalyos/json-server
+    ports:
+      - 3000
+    volumes:
+      - .:/custom
+    command: /custom/vip.json
+
   traefik:
     image: traefik:1.7-alpine
     container_name: traefik
