@@ -2,9 +2,10 @@ services:
   dinner:
     image: lalyos/lunch:v8
     environment:
-      - TITLE=${TITLE}
-      - BGC=${BGC}
-      - BODY=${BODY}
+      - TITLE=${TITLE:?required}
+      - BGC=${BGC:?required}
+      - BODY=${BODY:?required}
+      - VIRTUAL_HOST=dinner.lvh.me
     ports:
       - 80
   mydb:
