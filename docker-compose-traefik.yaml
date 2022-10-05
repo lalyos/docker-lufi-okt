@@ -2,7 +2,7 @@ version: '3'
 
 services:
   ebed:
-    image: lunch:v8
+    image: lalyos/lunch:v8
     environment:
       - TITLE=ebedszunet
       - BGC=yellow
