@@ -6,6 +6,8 @@ services:
     environment:
       - TITLE=ebedszunet
       - BGC=yellow
+    # labels:
+    #   - "traefik.frontend.rule=Host:ebed.lvh.me"
 
   traefik:
     image: traefik:1.7-alpine
