@@ -75,6 +75,14 @@ docker exec -it mydb psql -U postgres -c 'select * from vip;'
 ```
 
 
+## docker-compose
+
+- rename `.env.example` to `.env`
+- start containers:
+```
+docker-compose up -d
+```
+
 ## Aliases
 
 ```
